@@ -12,3 +12,6 @@ server:
 .PHONY: clean
 clean:
 	rm -r bundle
+.PHONY: dev
+dev:
+	make css & make server
