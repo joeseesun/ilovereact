@@ -6,32 +6,54 @@
 </head>
 <body>
 
-<div class="container column">
-	<img class="react-logo" src="img/react-logo.svg"/>
-	<h1>Build Native Apps With React</h1>
+<div id="slider-control">
+  <a href="#native" class="active">
+    <div class="dot"></div>
+  </a>
+
+  <a href="#touch">
+    <div class="dot"></div>
+  </a>
+
+  <a href="#async">
+    <div class="dot"></div>
+  </a>
+
+  <a href="#flex">
+    <div class="dot"></div>
+  </a>
+</div>
 	
-	<div class="nav">
-		<a href="#native">
-		  Native iOS
-		</a>
+<div class="container column" id="intro-section">
+	<div class="overlay">
+		<img class="react-logo" src="img/react-logo.svg"/>
+		<h1>Build Native Apps With React</h1>
+		
+		<div class="nav">
+			<a href="#native">
+			  Native iOS
+			</a>
 
-		<a href="#touch">
-		  Touch Handling
-		</a>
+			<a href="#touch">
+			  Touch Handling
+			</a>
 
-		<a href="#async">
-		  Asynchronous
-		</a>
+			<a href="#async">
+			  Asynchronous
+			</a>
 
-		<a href="#flex">
-		  Flex &amp; Styling
-		</a>
+			<a href="#flex">
+			  Flex &amp; Styling
+			</a>
+		</div>
 	</div>
 </div>
 
 <div class="container row">
+
 	<div class="iphone-demo">
-		 <img src="img/iphone-frame.svg"/>
+			<img src="img/iphone-frame.svg" />
+		 	<img src="img/tumblr-demo.jpg" class="img-inner" />	 
 	</div>
 
 	<div class="feature-description">
@@ -45,7 +67,9 @@
 <div class="container row">
 	<div class="iphone-demo">
 		<img src="img/iphone-frame.svg"/>
+		<img src="img/swype-demo.jpg" class="img-inner" />
 	</div>
+
 	<div class="feature-description">
 	  <h2>Touches &amp; Gestures</h2>
 	  <p>
@@ -56,8 +80,10 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container" style="border:0px solid #fff;overflow: hidden">
 	<h1>Android Is Here</h1>
+	<img id="android-robot" src="img/android-robot.svg"/>	
 </div>
+
 
 </html>
