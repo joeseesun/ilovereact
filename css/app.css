@@ -94,6 +94,19 @@ a:hover {
   position: relative;
 }
 
+.iphone-image {
+  width: 300px;
+  height: 630px;
+  position: relative;
+  align-self: center;
+}
+
+.iphone-image .screen-image {
+  position: absolute;
+  top: 90px;
+  left: 24px;
+}
+
 
 .img-inner{
   position: absolute;
@@ -123,7 +136,7 @@ a:hover {
   right: 0;
   bottom: 50%;
   padding: 3px;
-  z-index: 999999;
+  z-index: 9999;
 }
 
 #slider-control a {
