@@ -15,3 +15,7 @@ clean:
 .PHONY: dev
 dev:
 	make css & make server
+.PHONY: push
+push:
+	git add . && git ci -m "new" && git push origin master && git push origin master:gh-pages
+

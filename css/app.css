@@ -115,7 +115,7 @@ a:hover {
   position: absolute;
   right:0;
   bottom:0;
-  transform:rotate(-45deg) translate(-8%,70%);
+  transform: translate(50%,50%) rotate(-45deg);
 }
 
 #slider-control {
