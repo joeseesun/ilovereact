@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test for js animation</title>
+	<link rel="stylesheet" type="text/css" href="bundle/testjs.css">
+	<script type="text/javascript" src="node_modules/gsap/src/uncompressed/TweenMax.js"></script>
+</head>
+<body>
+
+
+<div id="box">
+  
+</div>
+
+<script type="text/javascript">
+	// var deg360 = 2*Math.PI;
+	// var $box = document.getElementById("box");
+	
+	// var start = null;
+
+	// function draw(time) {
+	// 	// `time` is current time in millisecond
+
+	// 	if(!start) {
+	// 		start = time;
+	// 	}
+
+	// 	var second = (time - start) / 1000;
+	// 	var x = Math.sin(second * deg360)*100;
+	// 	console.log(x);
+	// 	$box.style.left = x + "px";
+	// 	requestAnimationFrame(draw);
+	// }
+
+	// requestAnimationFrame(draw);
+
+	// TweenMax.to("#box", 2, {
+	// 	css: {
+	// 		left: "200px",
+	// 		opacity: 0
+	// 	}
+	// });
+	
+	// TweenMax.from("#box", 2, {
+	// 	css: {
+	// 		left: "-200px",
+	// 		opacity: 0
+	// 	}
+	// });
+
+	TweenMax.fromTo("#box", 1, {
+			//from
+			css: {
+				left: "-200px",
+			},
+			repeat: -1,
+			yoyo: true
+		},{
+			//to
+			css: {
+				left: "200px"
+			},
+			repeat: -1,
+			yoyo: true,
+		}
+	);
+</script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ css:
 .PHONY: server
 server:
 	@# WARNING: The indentation MUST be a tab. Spaces won't work.
-	browser-sync start --server --files='index.html,bundle/app.css'
+	browser-sync start --server --files='index.html,testjs.html,js/app.js,bundle/app.css,bundle/testjs.css'
 
 .PHONY: clean
 clean:
