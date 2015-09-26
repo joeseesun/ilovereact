@@ -38,10 +38,13 @@ function animationLogo(){
 
 function updateSliderControl() {
   // get all the slider links
-  var links = document.querySelectorAll("#slider-control a")
+  var links = document.querySelectorAll("#slider-control a");
+
+
 
   for(var i = 0; i < links.length; i++) {
     var link = links[i];
+
 
     // Get the section pointed to by the link
 
@@ -90,9 +93,40 @@ function addSmoothScrolling() {
   }
 }
 
+function addScrollingBling() {
+  var controller = new ScrollMagic.Controller();
+  var fadeOutBackground = new ScrollMagic.Scene({
+    triggerElement: "#native",
+    triggerHook: "onEnter",
+    duration: "100%"
+  }).addTo(controller)
+    // .addIndicators({name: "fade out"})
+    .setTween("#intro-section .fading-overlay", 1, {opacity: 1});
+
+  var moveIPhone = new ScrollMagic.Scene({
+    triggerElement: "#native",
+    triggerHook: "onEnter",
+    duration: "100%"
+  }).addTo(controller)
+    // .addIndicators({name: "move iphone"})
+    .setTween("#iphone-overlay", 1, {width:"50%", y:0});
+
+
+  var pinIPhone = new ScrollMagic.Scene({
+    triggerElement: "#touch",
+    triggerHook: "onEnter",
+    duration: "100%"
+  }).setPin("#iphone-overlay")
+    .addTo(controller)
+    // .addIndicators({name: "pin iphone"})
+
+}
+
 // Use the onscroll callback to update slider.
 window.onscroll = function() {
   // ...
   updateSliderControl();
   addSmoothScrolling();
 }
+  addScrollingBling();
+
