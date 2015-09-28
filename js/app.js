@@ -7,8 +7,12 @@ window.onload = function() {
 function animateRobot() {
 	var t = new TimelineMax({yoyo: true, repeat: -1});
 
-	t.to("#android-robot",0.5,{rotation: "-65"})
-	.to("#android-robot",0.5,{rotation: "-10"})
+  var ROBOT_ANIMATE_TIME = 0.3;
+
+	t.to( "#android-robot" , ROBOT_ANIMATE_TIME , { rotation: "-55deg" } )
+  .to( "#android-robot" , ROBOT_ANIMATE_TIME , { rotation: "-35deg" } )
+  .to( "#android-robot" , ROBOT_ANIMATE_TIME , { rotation: "-45deg" } )
+  .to( "#android-robot" , 1 , { rotation: "-45deg" } );
 }
 
 function animationLogo(){
