@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test react refresh</title>
+	<script type="text/javascript" src="node_modules/react/dist/react.js"></script>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+	var name = "joe";
+	// var view = (
+	// 	'<div>' +
+	// 		'<p>hello,<b>' + name + '</b></p>' +
+	// 		'<p class="current-time">Current Time:' + new Date() + '</p>' +
+	// 	'</div>'
+	// );
+
+	function render() {
+		var view = (
+		'<div>' +
+			'<p>hello,<b>' + name + '</b></p>' +
+			'<p class="current-time">Current Time:' + new Date() + '</p>' +
+		'</div>'
+		);
+		console.log(view);
+		React.render(view,document.body);
+	}
+
+	// document.body.innerHTML = view;
+
+	// function updateTime() {
+	// 	var $currentTime = document.querySelector(".current-time");
+	// 	$currentTime.innerHTML = "Current Time:" + new Date();
+	// }
+
+	// setInterval(updateTime,1000);
+	setInterval(render,1000);
+</script>
+</html>
