@@ -8,7 +8,7 @@ server:
 	browser-sync start --server --files='index.html,test.html,bundle/app.css,build/app.js,js/app.js'
 .PHONY: js
 js:
-	babel --watch js/app.jsx --out-file build/app.js
+	webpack --watch --progress js/app.jsx build/app.js --module-bind "js=babel" --module-bind "jsx=babel"
 .PHONY: all
 all:
 	(make css & make js & make server & wait)
